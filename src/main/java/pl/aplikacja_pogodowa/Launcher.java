@@ -1,5 +1,6 @@
 package pl.aplikacja_pogodowa;
 
+import pl.aplikacja_pogodowa.controller.services.WeatherDataService;
 import pl.aplikacja_pogodowa.view.ViewFactory;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -14,7 +15,8 @@ public class Launcher extends Application {
 
         ViewFactory viewFactory = new ViewFactory();
         viewFactory.showMainWindow();
+        WeatherDataService weatherDataService = new WeatherDataService();
+    }
     }
 
 
-}

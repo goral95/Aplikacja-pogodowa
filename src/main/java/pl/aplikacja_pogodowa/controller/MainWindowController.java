@@ -5,9 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import pl.aplikacja_pogodowa.controller.services.WeatherDataService;
 import pl.aplikacja_pogodowa.view.ViewFactory;
 
 public class MainWindowController extends BaseController {
+
+    WeatherDataService weatherDataServiceLeft = new WeatherDataService();
+    WeatherDataService weatherDataServiceRight = new WeatherDataService();
+
     public MainWindowController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
     }
@@ -283,12 +288,42 @@ public class MainWindowController extends BaseController {
     private Label humidityRightDay5;
 
     @FXML
+    private Label timeRightDay1;
+
+    @FXML
+    private Label timeRightDay2;
+
+    @FXML
+    private Label timeRightDay3;
+
+    @FXML
+    private Label timeRightDay4;
+
+    @FXML
+    private Label timeRightDay5;
+
+    @FXML
+    private Label timeLeftDay1;
+
+    @FXML
+    private Label timeLeftDay2;
+
+    @FXML
+    private Label timeLeftDay3;
+
+    @FXML
+    private Label timeLeftDay4;
+
+    @FXML
+    private Label timeLeftDay5;
+
+    @FXML
     void loadWeatherLeft() {
-        System.out.println(cityLeftInput.getText());
+       weatherDataServiceLeft.loadWeatherData(cityLeftInput.getText());
     }
 
     @FXML
     void loadWeatherRight() {
-
+        weatherDataServiceRight.loadWeatherData(cityRightInput.getText());
     }
 }

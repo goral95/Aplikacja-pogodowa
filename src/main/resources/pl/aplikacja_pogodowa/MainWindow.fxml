@@ -132,9 +132,9 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="dateLeftDay1" alignment="CENTER" layoutX="22.0" layoutY="465.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateLeftDay1" alignment="CENTER" layoutX="25.0" layoutY="455.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconLeftDay1" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
@@ -162,9 +162,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateLeftDay2" alignment="CENTER" layoutX="22.0" layoutY="525.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateLeftDay2" alignment="CENTER" layoutX="25.0" layoutY="515.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconLeftDay2" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
@@ -192,9 +192,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateLeftDay3" alignment="CENTER" layoutX="22.0" layoutY="585.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateLeftDay3" alignment="CENTER" layoutX="25.0" layoutY="575.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconLeftDay3" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true">
@@ -222,9 +222,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateLeftDay4" alignment="CENTER" layoutX="22.0" layoutY="645.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateLeftDay4" alignment="CENTER" layoutX="25.0" layoutY="635.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconLeftDay4" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true">
@@ -252,9 +252,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateLeftDay5" alignment="CENTER" layoutX="22.0" layoutY="705.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateLeftDay5" alignment="CENTER" layoutX="25.0" layoutY="695.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconLeftDay5" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="705.0" pickOnBounds="true" preserveRatio="true">
@@ -280,6 +280,31 @@
             <Label fx:id="humidityLeftDay5" alignment="CENTER" layoutX="392.0" layoutY="705.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 100%" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay1" alignment="CENTER" layoutX="25.0" layoutY="475.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay2" alignment="CENTER" layoutX="25.0" layoutY="535.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay3" alignment="CENTER" layoutX="25.0" layoutY="595.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay4" alignment="CENTER" layoutX="25.0" layoutY="655.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay5" alignment="CENTER" layoutX="25.0" layoutY="715.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
          </children>
@@ -402,9 +427,9 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="dateRightDay1" alignment="CENTER" layoutX="23.0" layoutY="465.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateRightDay1" alignment="CENTER" layoutX="25.0" layoutY="455.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconRightDay1" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
@@ -432,9 +457,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateRightDay2" alignment="CENTER" layoutX="23.0" layoutY="525.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateRightDay2" alignment="CENTER" layoutX="25.0" layoutY="515.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconRightDay2" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
@@ -462,9 +487,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateRightDay3" alignment="CENTER" layoutX="23.0" layoutY="585.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateRightDay3" alignment="CENTER" layoutX="25.0" layoutY="575.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconRightDay3" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true">
@@ -492,9 +517,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateRightDay4" alignment="CENTER" layoutX="23.0" layoutY="645.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateRightDay4" alignment="CENTER" layoutX="25.0" layoutY="635.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconRightDay4" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true">
@@ -522,9 +547,9 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="dateRightDay5" alignment="CENTER" layoutX="23.0" layoutY="705.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="dateRightDay5" alignment="CENTER" layoutX="25.0" layoutY="695.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <ImageView fx:id="weatherIconRightDay5" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="705.0" pickOnBounds="true" preserveRatio="true">
@@ -550,6 +575,31 @@
             <Label fx:id="humidityRightDay5" alignment="CENTER" layoutX="393.0" layoutY="705.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 100%" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay1" alignment="CENTER" layoutX="25.0" layoutY="475.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay2" alignment="CENTER" layoutX="25.0" layoutY="535.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay3" alignment="CENTER" layoutX="25.0" layoutY="595.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay4" alignment="CENTER" layoutX="25.0" layoutY="655.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay5" alignment="CENTER" layoutX="25.0" layoutY="715.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
          </children>
