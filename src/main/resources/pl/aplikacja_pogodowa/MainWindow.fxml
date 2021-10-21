@@ -41,12 +41,12 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="temperatureMainLeft" alignment="CENTER" layoutX="335.0" layoutY="188.0" prefHeight="56.0" prefWidth="127.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="temperatureMainLeft" alignment="CENTER" layoutX="335.0" layoutY="198.0" prefHeight="56.0" prefWidth="127.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label fx:id="timeLeft" layoutX="89.0" layoutY="232.0" text="13.10.2021 12:30" textFill="WHITE" />
+            <Label fx:id="timeLeft" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="230.0" prefHeight="17.0" prefWidth="202.0" text="13.10.2021 12:30" textAlignment="CENTER" textFill="WHITE" />
             <Label layoutX="273.0" layoutY="267.0" text="Minimalna:" textFill="WHITE">
                <font>
                   <Font size="13.0" />
@@ -87,7 +87,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label fx:id="isLikeMainLeft" alignment="CENTER" layoutX="335.0" layoutY="165.0" prefHeight="27.0" prefWidth="127.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeMainLeft" alignment="CENTER" layoutX="335.0" layoutY="150.0" prefHeight="56.0" prefWidth="127.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
@@ -142,7 +142,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeLeftDay1" alignment="CENTER" layoutX="150.0" layoutY="465.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeLeftDay1" alignment="CENTER" layoutX="150.0" layoutY="458.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -172,7 +172,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeLeftDay2" alignment="CENTER" layoutX="150.0" layoutY="525.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeLeftDay2" alignment="CENTER" layoutX="150.0" layoutY="517.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -202,7 +202,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeLeftDay3" alignment="CENTER" layoutX="150.0" layoutY="585.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeLeftDay3" alignment="CENTER" layoutX="150.0" layoutY="578.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -232,7 +232,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeLeftDay4" alignment="CENTER" layoutX="150.0" layoutY="645.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeLeftDay4" alignment="CENTER" layoutX="150.0" layoutY="637.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -262,7 +262,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeLeftDay5" alignment="CENTER" layoutX="150.0" layoutY="705.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeLeftDay5" alignment="CENTER" layoutX="150.0" layoutY="698.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -336,12 +336,12 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="temperatureMainRight" alignment="CENTER" layoutX="336.0" layoutY="188.0" prefHeight="56.0" prefWidth="127.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="temperatureMainRight" alignment="CENTER" layoutX="335.0" layoutY="198.0" prefHeight="56.0" prefWidth="127.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label fx:id="timeRight" layoutX="90.0" layoutY="232.0" text="13.10.2021 12:30" textFill="WHITE" />
+            <Label fx:id="timeRight" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="230.0" prefHeight="17.0" prefWidth="202.0" text="13.10.2021 12:30" textAlignment="CENTER" textFill="WHITE" />
             <Label layoutX="274.0" layoutY="267.0" text="Minimalna:" textFill="WHITE">
                <font>
                   <Font size="13.0" />
@@ -382,7 +382,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label fx:id="isLikeMainRight" alignment="CENTER" layoutX="336.0" layoutY="165.0" prefHeight="27.0" prefWidth="127.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeMainRight" alignment="CENTER" layoutX="335.0" layoutY="150.0" prefHeight="56.0" prefWidth="127.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
@@ -437,7 +437,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeRightDay1" alignment="CENTER" layoutX="151.0" layoutY="465.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeRightDay1" alignment="CENTER" layoutX="150.0" layoutY="458.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -467,7 +467,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeRightDay2" alignment="CENTER" layoutX="151.0" layoutY="525.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeRightDay2" alignment="CENTER" layoutX="150.0" layoutY="517.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -497,7 +497,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeRightDay3" alignment="CENTER" layoutX="151.0" layoutY="585.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeRightDay3" alignment="CENTER" layoutX="150.0" layoutY="578.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -527,7 +527,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeRightDay4" alignment="CENTER" layoutX="151.0" layoutY="645.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeRightDay4" alignment="CENTER" layoutX="150.0" layoutY="641.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -557,7 +557,7 @@
                   <Image url="@5ccb1562f283b54e2b5653e0653cd27d.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="isLikeRightDay5" alignment="CENTER" layoutX="151.0" layoutY="705.0" prefHeight="27.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="isLikeRightDay5" alignment="CENTER" layoutX="150.0" layoutY="697.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
