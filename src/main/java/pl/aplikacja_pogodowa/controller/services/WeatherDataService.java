@@ -27,7 +27,7 @@ public class WeatherDataService {
         forecastWeatherData = new ArrayList<WeatherData>();
     }
 
-    public void fetchCurrentWeatherData(String city){
+    private void fetchCurrentWeatherData(String city){
         final Weather weather = openWeatherClient
                 .currentWeather()
                 .single()
@@ -58,7 +58,7 @@ public class WeatherDataService {
         currentWeatherData.setClouds(weather.getClouds().getValue() + " %");
     }
 
-    public void fetchForecastData(String city){
+    private void fetchForecastData(String city){
         final Forecast forecast = openWeatherClient
                 .forecast5Day3HourStep()
                 .byCityName(city)
