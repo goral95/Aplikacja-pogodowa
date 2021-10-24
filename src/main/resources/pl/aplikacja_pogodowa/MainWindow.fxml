@@ -18,7 +18,7 @@
             <Label layoutX="189.0" layoutY="14.0" text="WPISZ SWOJE MIASTO" textFill="WHITE" />
             <TextField fx:id="cityLeftInput" layoutX="139.0" layoutY="44.0" prefHeight="25.0" prefWidth="221.0" />
             <Button layoutX="195.0" layoutY="83.0" mnemonicParsing="false" onAction="#loadWeatherLeft" style="-fx-background-color: blue;" text="Wyszukaj pogode" textFill="WHITE" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" />
+            <Label fx:id="errorLeft" alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" textFill="#e80909" />
             <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="300.0" layoutX="25.0" layoutY="143.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
             <Line endX="-100.0" endY="519.0" layoutX="602.0" layoutY="281.0" startX="-100.0" startY="-281.0" strokeWidth="2.0" />
             <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="25.0" layoutY="453.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
@@ -314,7 +314,7 @@
             <Label layoutX="182.0" layoutY="14.0" text="WPISZ MIASTO WYJAZDU" textFill="WHITE" />
             <TextField fx:id="cityRightInput" layoutX="139.0" layoutY="44.0" prefHeight="25.0" prefWidth="221.0" />
             <Button layoutX="195.0" layoutY="83.0" mnemonicParsing="false" onAction="#loadWeatherRight" style="-fx-background-color: blue;" text="Wyszukaj pogode" textFill="WHITE" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" />
+            <Label fx:id="errorRight" alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" textFill="#e80909" />
             <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="300.0" layoutX="25.0" layoutY="143.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
             <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="26.0" layoutY="453.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
             <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="50.0" layoutX="26.0" layoutY="513.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
