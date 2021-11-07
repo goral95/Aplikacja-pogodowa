@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Pane prefHeight="800.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="189.0" layoutY="14.0" text="WPISZ SWOJE MIASTO" textFill="WHITE" />
+            <TextField fx:id="cityLeftInput" layoutX="139.0" layoutY="44.0" prefHeight="25.0" prefWidth="221.0" />
+            <Button layoutX="195.0" layoutY="83.0" mnemonicParsing="false" onAction="#loadWeatherLeft" style="-fx-background-color: blue;" text="Wyszukaj pogode" textFill="WHITE" />
+            <Label fx:id="errorLeft" alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" textFill="#e40c0c" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="300.0" layoutX="25.0" layoutY="143.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Line endX="-100.0" endY="519.0" layoutX="602.0" layoutY="281.0" startX="-100.0" startY="-281.0" strokeWidth="2.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="25.0" layoutY="453.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="50.0" layoutX="25.0" layoutY="513.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="25.0" layoutY="573.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="50.0" layoutX="25.0" layoutY="633.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="25.0" layoutY="693.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Label fx:id="cityLeft" alignment="CENTER" layoutX="32.0" layoutY="180.0" prefHeight="17.0" prefWidth="202.0" text="Miasto" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="countryLeft" alignment="CENTER" layoutX="32.0" layoutY="207.0" prefHeight="17.0" prefWidth="202.0" text="Państwo" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconMainLeft" fitHeight="100.0" fitWidth="125.0" layoutX="234.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="temperatureMainLeft" alignment="CENTER" layoutX="335.0" layoutY="198.0" prefHeight="56.0" prefWidth="127.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeft" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="230.0" prefHeight="17.0" prefWidth="202.0" text="13.10.2021 12:30" textAlignment="CENTER" textFill="WHITE" />
+            <Label layoutX="273.0" layoutY="267.0" text="Minimalna:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="261.0" layoutY="293.0" text="Maksymalna:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="minTemperatureLeft" alignment="CENTER" layoutX="349.0" layoutY="267.0" prefHeight="19.0" prefWidth="63.0" text="20°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="maxTemperatureLeft" alignment="CENTER" layoutX="349.0" layoutY="293.0" prefHeight="19.0" prefWidth="63.0" text="27°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="271.0" text="Wschód:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="297.0" text="Zachód:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="sunriseLeft" alignment="CENTER" layoutX="139.0" layoutY="271.0" prefHeight="19.0" prefWidth="81.0" text="03:22" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="sunsetLeft" alignment="CENTER" layoutX="139.0" layoutY="297.0" prefHeight="19.0" prefWidth="81.0" text="22:21" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="isLikeMainLeft" alignment="CENTER" layoutX="335.0" layoutY="150.0" prefHeight="56.0" prefWidth="127.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="38.0" layoutY="335.0" prefHeight="20.0" prefWidth="80.0" text="Ciśnienie" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="147.0" layoutY="335.0" prefHeight="20.0" prefWidth="80.0" text="Wilgotność" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="258.0" layoutY="335.0" prefHeight="20.0" prefWidth="80.0" text="Wiatr" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="349.0" layoutY="335.0" prefHeight="20.0" prefWidth="100.0" text="Zachmurzenie" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereMainLeft" alignment="CENTER" layoutX="28.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="1025 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityMainLeft" alignment="CENTER" layoutX="137.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="75%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="windMainLeft" alignment="CENTER" layoutX="248.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="3.4 m/s" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="cloudnessMainLeft" alignment="CENTER" layoutX="349.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="17%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLeftDay1" alignment="CENTER" layoutX="25.0" layoutY="455.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconLeftDay1" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeLeftDay1" alignment="CENTER" layoutX="150.0" layoutY="458.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureLeftDay1" alignment="CENTER" layoutX="264.0" layoutY="465.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereLeftDay1" alignment="CENTER" layoutX="308.0" layoutY="465.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityLeftDay1" alignment="CENTER" layoutX="392.0" layoutY="465.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLeftDay2" alignment="CENTER" layoutX="25.0" layoutY="515.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconLeftDay2" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeLeftDay2" alignment="CENTER" layoutX="150.0" layoutY="517.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureLeftDay2" alignment="CENTER" layoutX="264.0" layoutY="525.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereLeftDay2" alignment="CENTER" layoutX="308.0" layoutY="525.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityLeftDay2" alignment="CENTER" layoutX="392.0" layoutY="525.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLeftDay3" alignment="CENTER" layoutX="25.0" layoutY="575.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconLeftDay3" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeLeftDay3" alignment="CENTER" layoutX="150.0" layoutY="578.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureLeftDay3" alignment="CENTER" layoutX="264.0" layoutY="585.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereLeftDay3" alignment="CENTER" layoutX="308.0" layoutY="585.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityLeftDay3" alignment="CENTER" layoutX="392.0" layoutY="585.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLeftDay4" alignment="CENTER" layoutX="25.0" layoutY="635.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconLeftDay4" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeLeftDay4" alignment="CENTER" layoutX="150.0" layoutY="637.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureLeftDay4" alignment="CENTER" layoutX="264.0" layoutY="645.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereLeftDay4" alignment="CENTER" layoutX="308.0" layoutY="645.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityLeftDay4" alignment="CENTER" layoutX="392.0" layoutY="645.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLeftDay5" alignment="CENTER" layoutX="25.0" layoutY="695.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconLeftDay5" fitHeight="27.0" fitWidth="31.0" layoutX="122.0" layoutY="705.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeLeftDay5" alignment="CENTER" layoutX="150.0" layoutY="698.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureLeftDay5" alignment="CENTER" layoutX="264.0" layoutY="705.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereLeftDay5" alignment="CENTER" layoutX="308.0" layoutY="705.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityLeftDay5" alignment="CENTER" layoutX="392.0" layoutY="705.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 100%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay1" alignment="CENTER" layoutX="25.0" layoutY="475.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay2" alignment="CENTER" layoutX="25.0" layoutY="535.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay3" alignment="CENTER" layoutX="25.0" layoutY="595.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay4" alignment="CENTER" layoutX="25.0" layoutY="655.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeftDay5" alignment="CENTER" layoutX="25.0" layoutY="715.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="510.0" prefHeight="800.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="182.0" layoutY="14.0" text="WPISZ MIASTO WYJAZDU" textFill="WHITE" />
+            <TextField fx:id="cityRightInput" layoutX="139.0" layoutY="44.0" prefHeight="25.0" prefWidth="221.0" />
+            <Button layoutX="195.0" layoutY="83.0" mnemonicParsing="false" onAction="#loadWeatherRight" style="-fx-background-color: blue;" text="Wyszukaj pogode" textFill="WHITE" />
+            <Label fx:id="errorRight" alignment="CENTER" contentDisplay="CENTER" layoutY="118.0" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" textFill="#e40c0c" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="300.0" layoutX="25.0" layoutY="143.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="26.0" layoutY="453.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="50.0" layoutX="26.0" layoutY="513.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="26.0" layoutY="573.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#081d8a" height="50.0" layoutX="26.0" layoutY="633.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#088a10" height="50.0" layoutX="26.0" layoutY="693.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Label fx:id="cityRight" alignment="CENTER" layoutX="33.0" layoutY="180.0" prefHeight="17.0" prefWidth="202.0" text="Miasto" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="countryRight" alignment="CENTER" layoutX="33.0" layoutY="207.0" prefHeight="17.0" prefWidth="202.0" text="Państwo" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconMainRight" fitHeight="100.0" fitWidth="125.0" layoutX="235.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="temperatureMainRight" alignment="CENTER" layoutX="335.0" layoutY="198.0" prefHeight="56.0" prefWidth="127.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRight" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="230.0" prefHeight="17.0" prefWidth="202.0" text="13.10.2021 12:30" textAlignment="CENTER" textFill="WHITE" />
+            <Label layoutX="274.0" layoutY="267.0" text="Minimalna:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="262.0" layoutY="293.0" text="Maksymalna:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="minTemperatureRight" alignment="CENTER" layoutX="350.0" layoutY="267.0" prefHeight="19.0" prefWidth="63.0" text="20°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="maxTemperatureRight" alignment="CENTER" layoutX="350.0" layoutY="293.0" prefHeight="19.0" prefWidth="63.0" text="27°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="271.0" text="Wschód:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="297.0" text="Zachód:" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="sunriseRight" alignment="CENTER" layoutX="140.0" layoutY="271.0" prefHeight="19.0" prefWidth="81.0" text="03:22" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="sunsetRight" alignment="CENTER" layoutX="140.0" layoutY="297.0" prefHeight="19.0" prefWidth="81.0" text="22:21" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="isLikeMainRight" alignment="CENTER" layoutX="335.0" layoutY="150.0" prefHeight="56.0" prefWidth="127.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="39.0" layoutY="335.0" prefHeight="20.0" prefWidth="80.0" text="Ciśnienie" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="148.0" layoutY="335.0" prefHeight="20.0" prefWidth="80.0" text="Wilgotność" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="259.0" layoutY="335.0" prefHeight="20.0" prefWidth="80.0" text="Wiatr" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="350.0" layoutY="335.0" prefHeight="20.0" prefWidth="100.0" text="Zachmurzenie" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereMainRight" alignment="CENTER" layoutX="29.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="1025 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityMainRight" alignment="CENTER" layoutX="138.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="75%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="windMainRight" alignment="CENTER" layoutX="249.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="3.4 m/s" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="cloudnessMainRight" alignment="CENTER" layoutX="350.0" layoutY="362.0" prefHeight="56.0" prefWidth="100.0" text="17%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateRightDay1" alignment="CENTER" layoutX="25.0" layoutY="455.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconRightDay1" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeRightDay1" alignment="CENTER" layoutX="150.0" layoutY="458.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureRightDay1" alignment="CENTER" layoutX="265.0" layoutY="465.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereRightDay1" alignment="CENTER" layoutX="309.0" layoutY="465.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityRightDay1" alignment="CENTER" layoutX="393.0" layoutY="465.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateRightDay2" alignment="CENTER" layoutX="25.0" layoutY="515.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconRightDay2" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeRightDay2" alignment="CENTER" layoutX="150.0" layoutY="517.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureRightDay2" alignment="CENTER" layoutX="265.0" layoutY="525.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereRightDay2" alignment="CENTER" layoutX="309.0" layoutY="525.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityRightDay2" alignment="CENTER" layoutX="393.0" layoutY="525.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateRightDay3" alignment="CENTER" layoutX="25.0" layoutY="575.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconRightDay3" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeRightDay3" alignment="CENTER" layoutX="150.0" layoutY="578.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureRightDay3" alignment="CENTER" layoutX="265.0" layoutY="585.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereRightDay3" alignment="CENTER" layoutX="309.0" layoutY="585.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityRightDay3" alignment="CENTER" layoutX="393.0" layoutY="585.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateRightDay4" alignment="CENTER" layoutX="25.0" layoutY="635.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconRightDay4" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeRightDay4" alignment="CENTER" layoutX="150.0" layoutY="641.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureRightDay4" alignment="CENTER" layoutX="265.0" layoutY="645.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereRightDay4" alignment="CENTER" layoutX="309.0" layoutY="645.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityRightDay4" alignment="CENTER" layoutX="393.0" layoutY="645.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 88%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateRightDay5" alignment="CENTER" layoutX="25.0" layoutY="695.0" prefHeight="27.0" prefWidth="100.0" text="13.10.2021" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="weatherIconRightDay5" fitHeight="27.0" fitWidth="31.0" layoutX="123.0" layoutY="705.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="isLikeRightDay5" alignment="CENTER" layoutX="150.0" layoutY="697.0" prefHeight="42.0" prefWidth="110.0" text="Słonecznie" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperatureRightDay5" alignment="CENTER" layoutX="265.0" layoutY="705.0" prefHeight="27.0" prefWidth="45.0" text="25°C" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="atmosphereRightDay5" alignment="CENTER" layoutX="309.0" layoutY="705.0" prefHeight="27.0" prefWidth="74.0" text="1010 hPa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityRightDay5" alignment="CENTER" layoutX="393.0" layoutY="705.0" prefHeight="27.0" prefWidth="74.0" text="wilg. 100%" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay1" alignment="CENTER" layoutX="25.0" layoutY="475.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay2" alignment="CENTER" layoutX="25.0" layoutY="535.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay3" alignment="CENTER" layoutX="25.0" layoutY="595.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay4" alignment="CENTER" layoutX="25.0" layoutY="655.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeRightDay5" alignment="CENTER" layoutX="25.0" layoutY="715.0" prefHeight="27.0" prefWidth="100.0" text="12:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

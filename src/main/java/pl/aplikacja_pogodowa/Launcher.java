@@ -1,22 +1,26 @@
 package pl.aplikacja_pogodowa;
 
-import pl.aplikacja_pogodowa.controller.services.WeatherDataService;
-import pl.aplikacja_pogodowa.view.ViewFactory;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import pl.aplikacja_pogodowa.view.ViewFactory;
 
 public class Launcher extends Application {
-    public static void  main (String[] args){
+    public static void main(String[] args) {
         launch(args);
     }
 
+
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
 
         ViewFactory viewFactory = new ViewFactory();
         viewFactory.showMainWindow();
-        WeatherDataService weatherDataService = new WeatherDataService();
+
+
     }
-    }
+
+}
+
+
 
 
