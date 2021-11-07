@@ -1,141 +1,168 @@
 package pl.aplikacja_pogodowa.model;
 
-import java.time.LocalDateTime;
+import java.util.Objects;
 
-public class WeatherData {
-    private String city;
-    private String country;
-    private String date;
-    private String time;
-    private String sunset;
-    private String sunrise;
-    private String weatherIcon;
-    private String isLike;
-    private String temperature;
-    private String maxTemperature;
-    private String minTemperature;
-    private String pressure;
-    private String humidity;
-    private String windSpeed;
-    private String clouds;
+public final class WeatherData {
+    private final String city;
+    private final String country;
+    private final String date;
+    private final String time;
+    private final String sunset;
+    private final String sunrise;
+    private final String weatherIcon;
+    private final String isLike;
+    private final String temperature;
+    private final String maxTemperature;
+    private final String minTemperature;
+    private final String pressure;
+    private final String humidity;
+    private final String windSpeed;
+    private final String clouds;
 
-    public void setCity(String city) {
+    public WeatherData(String city, String country, String date,
+                String time, String sunset, String sunrise, String weatherIcon,
+                String isLike, String temperature, String maxTemperature, String minTemperature,
+                String pressure, String humidity, String windSpeed, String clouds) {
         this.city = city;
-    }
-
-    public void setCountry(String country) {
         this.country = country;
-    }
-
-    public void setDate(String date) {
         this.date = date;
-    }
-
-    public void setTime(String time) {
         this.time = time;
-    }
-
-    public void setSunset(String sunset) {
         this.sunset = sunset;
-    }
-
-    public void setSunrise(String sunrise) {
         this.sunrise = sunrise;
-    }
-
-    public void setWeatherIcon(String weatherIcon) {
         this.weatherIcon = weatherIcon;
-    }
-
-    public void setIsLike(String isLike) {
         this.isLike = isLike;
-    }
-
-    public void setTemperature(String temperature) {
         this.temperature = temperature;
-    }
-
-    public void setMaxTemperature(String maxTemperature) {
         this.maxTemperature = maxTemperature;
-    }
-
-    public void setMinTemperature(String minTemperature) {
         this.minTemperature = minTemperature;
-    }
-
-    public void setPressure(String pressure) {
         this.pressure = pressure;
-    }
-
-    public void setHumidity(String humidity) {
         this.humidity = humidity;
-    }
-
-    public void setWindSpeed(String windSpeed) {
         this.windSpeed = windSpeed;
-    }
-
-    public void setClouds(String clouds) {
         this.clouds = clouds;
     }
 
-    public String getCity() {
+    public WeatherData(String date, String time, String weatherIcon, String isLike, String temperature, String pressure, String humidity) {
+        this.date = date;
+        this.time = time;
+        this.weatherIcon = weatherIcon;
+        this.isLike = isLike;
+        this.temperature = temperature;
+        this.pressure = pressure;
+        this.humidity = humidity;
+        this.city = null;
+        this.country = null;
+        this.sunset = null;
+        this.sunrise = null;
+        this.maxTemperature = null;
+        this.minTemperature = null;
+        this.windSpeed = null;
+        this.clouds = null;
+    }
+
+    public String city() {
         return city;
     }
 
-    public String getCountry() {
+    public String country() {
         return country;
     }
 
-    public String getDate() {
+    public String date() {
         return date;
     }
 
-    public String getTime() {
+    public String time() {
         return time;
     }
 
-    public String getSunset() {
+    public String sunset() {
         return sunset;
     }
 
-    public String getSunrise() {
+    public String sunrise() {
         return sunrise;
     }
 
-    public String getWeatherIcon() {
+    public String weatherIcon() {
         return weatherIcon;
     }
 
-    public String getIsLike() {
+    public String isLike() {
         return isLike;
     }
 
-    public String getTemperature() {
+    public String temperature() {
         return temperature;
     }
 
-    public String getMaxTemperature() {
+    public String maxTemperature() {
         return maxTemperature;
     }
 
-    public String getMinTemperature() {
+    public String minTemperature() {
         return minTemperature;
     }
 
-    public String getPressure() {
+    public String pressure() {
         return pressure;
     }
 
-    public String getHumidity() {
-        return humidity;
+    public String Humidity() {
+        return this.humidity;
     }
 
-    public String getWindSpeed() {
+    public String windSpeed() {
         return windSpeed;
     }
 
-    public String getClouds() {
+    public String clouds() {
         return clouds;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+        var that = (WeatherData) obj;
+        return Objects.equals(this.city, that.city) &&
+                Objects.equals(this.country, that.country) &&
+                Objects.equals(this.date, that.date) &&
+                Objects.equals(this.time, that.time) &&
+                Objects.equals(this.sunset, that.sunset) &&
+                Objects.equals(this.sunrise, that.sunrise) &&
+                Objects.equals(this.weatherIcon, that.weatherIcon) &&
+                Objects.equals(this.isLike, that.isLike) &&
+                Objects.equals(this.temperature, that.temperature) &&
+                Objects.equals(this.maxTemperature, that.maxTemperature) &&
+                Objects.equals(this.minTemperature, that.minTemperature) &&
+                Objects.equals(this.pressure, that.pressure) &&
+                Objects.equals(this.humidity, that.humidity) &&
+                Objects.equals(this.windSpeed, that.windSpeed) &&
+                Objects.equals(this.clouds, that.clouds);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(city, country, date, time, sunset, sunrise, weatherIcon, isLike, temperature, maxTemperature, minTemperature, pressure, humidity, windSpeed, clouds);
+    }
+
+    @Override
+    public String toString() {
+        return "WeatherDataTest[" +
+                "city=" + city + ", " +
+                "country=" + country + ", " +
+                "date=" + date + ", " +
+                "time=" + time + ", " +
+                "sunset=" + sunset + ", " +
+                "sunrise=" + sunrise + ", " +
+                "weatherIcon=" + weatherIcon + ", " +
+                "isLike=" + isLike + ", " +
+                "temperature=" + temperature + ", " +
+                "maxTemperature=" + maxTemperature + ", " +
+                "minTemperature=" + minTemperature + ", " +
+                "pressure=" + pressure + ", " +
+                "Humidity=" + humidity + ", " +
+                "windSpeed=" + windSpeed + ", " +
+                "clouds=" + clouds + ']';
+    }
+
 }

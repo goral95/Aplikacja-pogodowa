@@ -5,60 +5,57 @@ import com.github.prominence.openweathermap.api.enums.Language;
 import com.github.prominence.openweathermap.api.enums.UnitSystem;
 import com.github.prominence.openweathermap.api.model.forecast.Forecast;
 import com.github.prominence.openweathermap.api.model.forecast.WeatherForecast;
-import com.github.prominence.openweathermap.api.model.weather.Location;
 import com.github.prominence.openweathermap.api.model.weather.Weather;
 import pl.aplikacja_pogodowa.Config;
 import pl.aplikacja_pogodowa.model.WeatherData;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Formatter;
 import java.util.List;
 import java.util.Locale;
 
 public class WeatherDataService {
-    private OpenWeatherMapClient openWeatherClient;
-    public  WeatherData currentWeatherData;
-    public List<WeatherData> forecastWeatherData;
+    private final OpenWeatherMapClient openWeatherClient;
+    private final DateTimeFormatter formatterTime;
+    private final DateTimeFormatter formatterDate;
 
-    public WeatherDataService(){
+    public WeatherDataService() {
         openWeatherClient = new OpenWeatherMapClient(Config.API_TOKEN);
-        currentWeatherData = new WeatherData();
-        forecastWeatherData = new ArrayList<WeatherData>();
+        formatterTime = DateTimeFormatter.ofPattern("HH:mm:ss");
+        formatterDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     }
 
-    private void fetchCurrentWeatherData(String city){
+    public WeatherData fetchCurrentWeatherData(String inputCity) {
         final Weather weather = openWeatherClient
                 .currentWeather()
                 .single()
-                .byCityName(city)
+                .byCityName(inputCity)
                 .language(Language.POLISH)
                 .unitSystem(UnitSystem.METRIC)
                 .retrieve()
                 .asJava();
 
-
-        currentWeatherData.setCity(weather.getLocation().getName());
+        String city = weather.getLocation().getName();
         Locale locale = new Locale("Polish", weather.getLocation().getCountryCode());
-        currentWeatherData.setCountry(locale.getDisplayCountry());
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        currentWeatherData.setDate(weather.getCalculationTime().format(formatter));
-        formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-        currentWeatherData.setTime(weather.getCalculationTime().format(formatter));
-        currentWeatherData.setSunrise(weather.getLocation().getSunriseTime().format(formatter));
-        currentWeatherData.setSunset(weather.getLocation().getSunsetTime().format(formatter));
-        currentWeatherData.setIsLike(weather.getWeatherState().getDescription());
-        currentWeatherData.setWeatherIcon(weather.getWeatherState().getWeatherIconUrl());
-        currentWeatherData.setTemperature((int)weather.getTemperature().getValue() + weather.getTemperature().getUnit());
-        currentWeatherData.setMinTemperature(weather.getTemperature().getMinTemperature().intValue() + weather.getTemperature().getUnit());
-        currentWeatherData.setMaxTemperature(weather.getTemperature().getMaxTemperature().intValue() + weather.getTemperature().getUnit());
-        currentWeatherData.setPressure((int)weather.getAtmosphericPressure().getValue() + " " + weather.getAtmosphericPressure().getUnit());
-        currentWeatherData.setWindSpeed((int)weather.getWind().getSpeed() + " m/s");
-        currentWeatherData.setHumidity(weather.getHumidity().getValue() + " %");
-        currentWeatherData.setClouds(weather.getClouds().getValue() + " %");
+        String country = locale.getDisplayCountry();
+        String date = weather.getCalculationTime().format(formatterDate);
+        String time = weather.getCalculationTime().format(formatterTime);
+        String sunrise = weather.getLocation().getSunriseTime().format(formatterTime);
+        String sunset = weather.getLocation().getSunsetTime().format(formatterTime);
+        String isLike = weather.getWeatherState().getDescription();
+        String weatherIcon = weather.getWeatherState().getWeatherIconUrl();
+        String temperature= (int) weather.getTemperature().getValue() + weather.getTemperature().getUnit();
+        String minTemperature = weather.getTemperature().getMinTemperature().intValue() + weather.getTemperature().getUnit();
+        String maxTemperature = weather.getTemperature().getMaxTemperature().intValue() + weather.getTemperature().getUnit();
+        String pressure = (int) weather.getAtmosphericPressure().getValue() + " " + weather.getAtmosphericPressure().getUnit();
+        String windSpeed = (int) weather.getWind().getSpeed() + " m/s";
+        String humidity = weather.getHumidity().getValue() + " %";
+        String clouds = weather.getClouds().getValue() + " %";
+
+        return new WeatherData(city, country, date, time, sunset, sunrise, weatherIcon, isLike, temperature, maxTemperature, minTemperature, pressure, humidity, windSpeed, clouds);
     }
 
-    private void fetchForecastData(String city){
+    public List<WeatherData> fetchForecastData(String city) {
         final Forecast forecast = openWeatherClient
                 .forecast5Day3HourStep()
                 .byCityName(city)
@@ -67,24 +64,21 @@ public class WeatherDataService {
                 .count(40)
                 .retrieve()
                 .asJava();
-        List <WeatherForecast> weatherForecasts = forecast.getWeatherForecasts();
+        List<WeatherForecast> weatherForecasts = forecast.getWeatherForecasts();
+        var forecastWeatherData = new ArrayList<WeatherData>();
 
-        DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("HH:mm:ss");
-        DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        for(int i = 0; i < weatherForecasts.size(); i= i + 8){
-            WeatherData weatherData = new WeatherData();
-            weatherData.setDate(weatherForecasts.get(i).getForecastTime().format(formatterDate));
-            weatherData.setTime(weatherForecasts.get(i).getForecastTime().format(formatterTime));
-            weatherData.setWeatherIcon(weatherForecasts.get(i).getWeatherState().getWeatherIconUrl());
-            weatherData.setTemperature((int)weatherForecasts.get(i).getTemperature().getValue() + weatherForecasts.get(i).getTemperature().getUnit());
-            weatherData.setPressure((int)weatherForecasts.get(i).getAtmosphericPressure().getValue() + weatherForecasts.get(i).getAtmosphericPressure().getUnit() );
-            weatherData.setHumidity("wilg." + weatherForecasts.get(i).getHumidity().getValue() + "%");
-            forecastWeatherData.add(weatherData);
+        for (int i = 0; i < weatherForecasts.size(); i = i + 8) {
+
+            String date = weatherForecasts.get(i).getForecastTime().format(formatterDate);
+            String time = weatherForecasts.get(i).getForecastTime().format(formatterTime);
+            String weatherIcon = weatherForecasts.get(i).getWeatherState().getWeatherIconUrl();
+            String isLike = weatherForecasts.get(i).getWeatherState().getDescription();
+            String temperature = (int) weatherForecasts.get(i).getTemperature().getValue() + weatherForecasts.get(i).getTemperature().getUnit();
+            String pressure = (int) weatherForecasts.get(i).getAtmosphericPressure().getValue() + weatherForecasts.get(i).getAtmosphericPressure().getUnit();
+            String humidity = "wilg." + weatherForecasts.get(i).getHumidity().getValue() + "%";
+            forecastWeatherData.add(new WeatherData(date, time, weatherIcon, isLike, temperature, pressure, humidity));
         }
-    }
 
-    public void loadWeatherData(String city){
-        fetchCurrentWeatherData(city);
-        fetchForecastData(city);
+        return forecastWeatherData;
     }
 }
