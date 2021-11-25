@@ -19,8 +19,8 @@ public class WeatherDataService {
     private final DateTimeFormatter formatterTime;
     private final DateTimeFormatter formatterDate;
 
-    public WeatherDataService() {
-        openWeatherClient = new OpenWeatherMapClient(Config.API_TOKEN);
+    public WeatherDataService(OpenWeatherMapClient openWeatherClient) {
+        this.openWeatherClient = openWeatherClient;
         formatterTime = DateTimeFormatter.ofPattern("HH:mm:ss");
         formatterDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     }

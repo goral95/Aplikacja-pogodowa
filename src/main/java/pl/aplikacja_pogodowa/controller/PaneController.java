@@ -1,11 +1,13 @@
 package pl.aplikacja_pogodowa.controller;
 
+import com.github.prominence.openweathermap.api.OpenWeatherMapClient;
 import com.github.prominence.openweathermap.api.exception.NoDataFoundException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import pl.aplikacja_pogodowa.Config;
 import pl.aplikacja_pogodowa.controller.services.WeatherDataService;
 import pl.aplikacja_pogodowa.model.WeatherData;
 
@@ -172,7 +174,8 @@ public class PaneController {
     void loadWeather() {
         if (fieldNotEmpty(cityInput)) {
             try {
-                WeatherDataService weatherDataService = new WeatherDataService();
+
+                WeatherDataService weatherDataService = new WeatherDataService(new OpenWeatherMapClient(Config.API_TOKEN));
                 var weatherData = weatherDataService.fetchCurrentWeatherData(cityInput.getText());
                 var forecastWeatherData = weatherDataService.fetchForecastData(cityInput.getText());
 
