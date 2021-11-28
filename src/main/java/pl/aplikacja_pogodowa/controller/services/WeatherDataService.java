@@ -26,33 +26,11 @@ public class WeatherDataService {
     }
 
     public WeatherData fetchCurrentWeatherData(String inputCity) {
-        final Weather weather = openWeatherClient
-                .currentWeather()
-                .single()
-                .byCityName(inputCity)
-                .language(Language.POLISH)
-                .unitSystem(UnitSystem.METRIC)
-                .retrieve()
-                .asJava();
+        Weather weatherFromApi = getWeatherFromApi(inputCity);
 
-        String city = weather.getLocation().getName();
-        Locale locale = new Locale("Polish", weather.getLocation().getCountryCode());
-        String country = locale.getDisplayCountry();
-        String date = weather.getCalculationTime().format(formatterDate);
-        String time = weather.getCalculationTime().format(formatterTime);
-        String sunrise = weather.getLocation().getSunriseTime().format(formatterTime);
-        String sunset = weather.getLocation().getSunsetTime().format(formatterTime);
-        String isLike = weather.getWeatherState().getDescription();
-        String weatherIcon = weather.getWeatherState().getWeatherIconUrl();
-        String temperature= (int) weather.getTemperature().getValue() + weather.getTemperature().getUnit();
-        String minTemperature = weather.getTemperature().getMinTemperature().intValue() + weather.getTemperature().getUnit();
-        String maxTemperature = weather.getTemperature().getMaxTemperature().intValue() + weather.getTemperature().getUnit();
-        String pressure = (int) weather.getAtmosphericPressure().getValue() + " " + weather.getAtmosphericPressure().getUnit();
-        String windSpeed = (int) weather.getWind().getSpeed() + " m/s";
-        String humidity = weather.getHumidity().getValue() + " %";
-        String clouds = weather.getClouds().getValue() + " %";
+        WeatherData currentWeatherData = transformCurrentWeatherFromApiToWeatherDataModel(weatherFromApi);
 
-        return new WeatherData(city, country, date, time, sunset, sunrise, weatherIcon, isLike, temperature, maxTemperature, minTemperature, pressure, humidity, windSpeed, clouds);
+        return currentWeatherData;
     }
 
     public List<WeatherData> fetchForecastData(String city) {
@@ -80,5 +58,42 @@ public class WeatherDataService {
         }
 
         return forecastWeatherData;
+    }
+
+    private Weather getWeatherFromApi(String city){
+        Weather weather = openWeatherClient
+                .currentWeather()
+                .single()
+                .byCityName(city)
+                .language(Language.POLISH)
+                .unitSystem(UnitSystem.METRIC)
+                .retrieve()
+                .asJava();
+        return weather;
+    }
+
+    private WeatherData transformCurrentWeatherFromApiToWeatherDataModel(Weather weatherFromApi){
+        String city = weatherFromApi.getLocation().getName();
+        String country = getCountryFromCountryCode(weatherFromApi.getLocation().getCountryCode());
+        String date = weatherFromApi.getCalculationTime().format(formatterDate);
+        String time = weatherFromApi.getCalculationTime().format(formatterTime);
+        String sunrise = weatherFromApi.getLocation().getSunriseTime().format(formatterTime);
+        String sunset = weatherFromApi.getLocation().getSunsetTime().format(formatterTime);
+        String isLike = weatherFromApi.getWeatherState().getDescription();
+        String weatherIcon = weatherFromApi.getWeatherState().getWeatherIconUrl();
+        String temperature= (int) weatherFromApi.getTemperature().getValue() + weatherFromApi.getTemperature().getUnit();
+        String minTemperature = weatherFromApi.getTemperature().getMinTemperature().intValue() + weatherFromApi.getTemperature().getUnit();
+        String maxTemperature = weatherFromApi.getTemperature().getMaxTemperature().intValue() + weatherFromApi.getTemperature().getUnit();
+        String pressure = (int) weatherFromApi.getAtmosphericPressure().getValue() + " " + weatherFromApi.getAtmosphericPressure().getUnit();
+        String windSpeed = (int) weatherFromApi.getWind().getSpeed() + " m/s";
+        String humidity = weatherFromApi.getHumidity().getValue() + " %";
+        String clouds = weatherFromApi.getClouds().getValue() + " %";
+
+        return new WeatherData(city, country, date, time, sunset, sunrise, weatherIcon, isLike, temperature, maxTemperature, minTemperature, pressure, humidity, windSpeed, clouds);
+    }
+
+    private String getCountryFromCountryCode(String countryCode){
+        Locale locale = new Locale("Polish", countryCode);
+        return locale.getDisplayCountry();
     }
 }
