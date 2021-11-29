@@ -175,7 +175,7 @@ public class PaneController {
         if (fieldNotEmpty(cityInput)) {
             try {
 
-                WeatherDataService weatherDataService = new WeatherDataService(new OpenWeatherMapClient(Config.API_TOKEN));
+                WeatherDataService weatherDataService = new WeatherDataService();
                 var weatherData = weatherDataService.fetchCurrentWeatherData(cityInput.getText());
                 var forecastWeatherData = weatherDataService.fetchForecastData(cityInput.getText());
 

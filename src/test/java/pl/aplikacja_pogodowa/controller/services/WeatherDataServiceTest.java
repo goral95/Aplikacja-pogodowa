@@ -25,21 +25,13 @@ class WeatherDataServiceTest {
     @Test
     void fetchCurrentWeatherData() {
         //given
-        OpenWeatherMapClient openWeatherMapClientMock = mock(OpenWeatherMapClient.class);
-        WeatherDataService weatherDataService = new WeatherDataService(openWeatherMapClientMock);
+        WeatherDataService weatherDataServiceMock = spy(WeatherDataService.class);
         Weather weatherMock = mock(Weather.class);
-        given(openWeatherMapClientMock
-                .currentWeather()
-                .single()
-                .byCityName(anyString())
-                .language(Language.POLISH)
-                .unitSystem(UnitSystem.METRIC)
-                .retrieve()
-                .asJava())
-                .willReturn(weatherMock);
+        given(weatherDataServiceMock.getWeatherFromApi(anyString())).willReturn(weatherMock);
+        given(weatherMock.getLocation().getName()).willReturn("Warszawa");
         //when
-
+        WeatherData result = weatherDataServiceMock.fetchCurrentWeatherData();
         //then
-
+        assertThat(result.city(), equalTo("Warszawa"));
     }
 }
