@@ -10,21 +10,28 @@ import pl.aplikacja_pogodowa.view.ViewFactory;
 
 public class MainWindowController extends BaseController {
 
+    /*@FXML
+    private PaneController paneControllerLeft;
+    @FXML
+    private PaneController paneControllerRight;*/
+
     public MainWindowController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
+        //paneControllerLeft = new PaneController(new WeatherDataService(new OpenWeatherMapClient(Config.API_TOKEN)));
+        //paneControllerRight = new PaneController(new WeatherDataService(new OpenWeatherMapClient(Config.API_TOKEN)));
     }
 
-    @FXML
+    /*@FXML
     private Parent paneLeft;
 
-    @FXML
-    private PaneController paneLeftController;
+
+
 
     @FXML
-    private Parent paneRight;
+    private Parent paneRight;*/
 
-    @FXML
-    private PaneController paneRightController;
+
+
 
 }
 

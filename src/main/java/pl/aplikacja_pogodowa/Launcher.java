@@ -12,7 +12,7 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) {
-
+        System.out.println("czesc");
         ViewFactory viewFactory = new ViewFactory();
         viewFactory.showMainWindow();
 
