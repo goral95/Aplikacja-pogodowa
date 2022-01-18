@@ -8,7 +8,7 @@ import com.github.prominence.openweathermap.api.model.weather.Wind;
 import java.time.LocalDateTime;
 
 public class ApiWeatherStub {
-    private Weather weather = new Weather();
+    private final Weather weather = new Weather();
 
     public ApiWeatherStub() {
 

@@ -91,5 +91,6 @@ public class WeatherDataService {
     private String getCountryFromCountryCode(String countryCode){
         Locale locale = new Locale("Polish", countryCode);
         return locale.getDisplayCountry();
+
     }
 }

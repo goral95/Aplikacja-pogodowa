@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ApiForecastStub {
-    private List<WeatherForecast> weatherForecast = new ArrayList<>();
+    private final List<WeatherForecast> weatherForecast = new ArrayList<>();
 
     public ApiForecastStub() {
         for(int i = 0; i < 40; i++){

@@ -5,6 +5,7 @@ import com.github.prominence.openweathermap.api.enums.Language;
 import com.github.prominence.openweathermap.api.enums.UnitSystem;
 import com.github.prominence.openweathermap.api.model.WeatherState;
 import com.github.prominence.openweathermap.api.model.weather.Weather;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -13,6 +14,7 @@ import pl.aplikacja_pogodowa.ApiWeatherStub;
 import pl.aplikacja_pogodowa.model.WeatherData;
 
 import java.util.List;
+import java.util.Locale;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -22,10 +24,16 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.willReturn;
 import static org.mockito.Mockito.*;
 
+
 class WeatherDataServiceTest {
 
     @Mock
     OpenWeatherMapClient openWeatherMapClientMock;
+
+    @BeforeAll
+    public static void setup() {
+        Locale.setDefault(new Locale("pl", "PL"));
+    }
 
     @Test
     void allTransformedDataShouldMatch() {
